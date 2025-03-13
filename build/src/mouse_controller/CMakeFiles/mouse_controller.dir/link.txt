@@ -1,2 +1,0 @@
-/usr/bin/ar qc ../../lib/libmouse_controller.a CMakeFiles/mouse_controller.dir/windows_controller/MWindowsController.cpp.o
-/usr/bin/ranlib ../../lib/libmouse_controller.a

@@ -1,2 +1,0 @@
-/usr/bin/ar qc ../../../lib/libpendulum_controller.a CMakeFiles/pendulum_controller.dir/pendulum_controller.cpp.o
-/usr/bin/ranlib ../../../lib/libpendulum_controller.a
