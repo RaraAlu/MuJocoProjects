@@ -1,0 +1,26 @@
+BasedOnStyle: LLVM           # 基于 LLVM 代码风格
+UseTab: Never                # 不使用 Tab 键，使用空格进行缩进
+IndentWidth: 4               # 缩进宽度为 4 个空格
+TabWidth: 4                  # Tab 宽度为 4 个空格 (尽管不使用 Tab，但仍需设置)
+BreakBeforeBraces: Custom    # 自定义大括号换行规则
+BraceWrapping:               # 大括号换行规则
+    AfterNamespace: false   # 命名空间定义后的大括号 *不* 换行
+    AfterClass: false       # 类定义后的大括号 *不* 换行
+    AfterFunction: true     # 函数定义后的大括号换行
+    AfterControlStatement: false # 控制语句 (if, for, while 等) 后的大括号 *不* 换行
+AlignConsecutiveBitFields:   # 对齐连续的位域
+    Enabled: true          # 启用对齐
+    AcrossEmptyLines: true  # 跨空行对齐
+    AcrossComments: false   # 不跨注释对齐
+AllowShortIfStatementsOnASingleLine: false  # 不允许短的 if 语句写在同一行 (if (...) statement;)
+IndentCaseLabels: false     # case 标签 *不* 额外缩进
+ColumnLimit: 0              # 不限制每行代码的长度 (0 表示无限制)
+AccessModifierOffset: -4    # 访问修饰符 (public, private, protected) 的缩进偏移量为 -4 (相对于类定义的缩进)
+NamespaceIndentation: None   # 命名空间内的内容 *不* 额外缩进
+EmptyLineBeforeAccessModifier: Always  # 访问修饰符 *之前* 总是添加一个空行
+EmptyLineAfterAccessModifier: Always   # 访问修饰符 *之后* 总是添加一个空行
+FixNamespaceComments: false  # *不* 自动修复命名空间后的注释 (通常是 // namespace_name)
+MaxEmptyLinesToKeep: 2      # 最多保留 2 个连续空行
+
+
+ref(APA): Lulrara.暗海.https://cy.darksea.xyz. Retrieved 2025/3/5.

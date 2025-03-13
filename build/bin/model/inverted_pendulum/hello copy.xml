@@ -1,0 +1,44 @@
+<mujoco>
+    <compiler angle="radian" />
+    <visual>
+        <headlight ambient=".5 .5 .5" />
+    </visual>
+
+    <asset>
+        <material name="white" rgba="1 1 1 1" />
+        <material name="green" rgba="0 1 0 1" />
+        <material name="blue" rgba="0 0 1 1" />
+        <material name="custom1" rgba=".5 .5 .5 1" />
+        <texture name="grid" type="2d" builtin="checker" width="512" height="512" rgb1=".1 .2 .3" rgb2=".2 .3 .4"/>
+        <material name="grid" texture="grid" texrepeat="1 1" texuniform="true" reflectance=".2"/>
+    </asset>
+
+
+    <option gravity="0 0 -0.5" timestep="0.001" />
+    <worldbody>
+        <light diffuse="0.5 0.5 0.5" pos="0 0 3" dir="0 0 -1" />
+        <geom name="floor" size="0 0 .05" type="plane" material="grid" condim="3" />
+        <body pos="0 0 1" quat="1 0 0 0">
+            <!-- <body pos="0 0 1" euler="0 30 0"> -->
+            <joint type="free" />
+            <inertial pos="0 0 0" mass="1" diaginertia="0.001 0.001 0.001" />
+            <geom type="box" size=".1 .2 .3" rgba=".9 0 0 1" />
+            <!-- <geom type="box" size=".1 .2 .3" material="white"/> -->
+        </body>
+
+        <!-- <body pos="0 0 2" quat="0.707107 0.000000 0.707107 0.000000"> -->
+        <body pos="0 0 2" euler="0 1.571 0">
+            <joint type="free" />
+            <inertial pos="0 0 0" mass="1" diaginertia="0.001 0.001 0.001" />
+            <geom type="box" size=".1 .2 .3" material="green" />
+        </body>
+
+        <body pos="0.25 0 3" quat="1 0 0 0">
+            <joint type="free" />
+            <inertial pos="0 0 0" mass="1" diaginertia="0.001 0.001 0.001" />
+            <geom type="sphere" size=".1" material="custom1" />
+        </body>
+
+
+    </worldbody>
+</mujoco>

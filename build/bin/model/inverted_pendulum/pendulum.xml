@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mujoco>
+    <option timestep="0.001" integrator="RK4" />
+
+    <asset>
+        <!-- 材质定义 -->
+        <texture type="skybox" builtin="gradient" rgb1="0.4 0.6 0.8" rgb2="0 0 0" width="512"
+            height="512" /> <!-- 天空盒 -->
+        <texture name="grid" type="2d" builtin="checker" rgb1=".2 .3 .4" rgb2=".1 0.15 0.2"
+            width="512" height="512" mark="cross" markrgb=".8 .8 .8" /> <!-- 网格纹理 -->
+        <material name="grid" texture="grid" texrepeat="10 10" texuniform="true" reflectance="0.2" /> <!--
+        网格材质 -->
+
+        <material name="MatCart" rgba="0.8 0.2 0.2 1" shininess="0.5" specular="0.5"
+            reflectance="0.3" />  <!-- 小车材质 -->
+        <material name="MatPendulum" rgba="0.2 0.8 0.2 1" shininess="0.8" specular="0.8"
+            reflectance="0.1" /> <!-- 摆杆材质 -->
+    </asset>
+
+    <worldbody>
+        <!-- 光源 -->
+        <light directional="true" diffuse="0.8 0.8 0.8" specular="0.3 0.3 0.3" pos="0 0 3"
+            dir="0 0 -1" castshadow="true" />
+
+        <!-- 地面 (使用网格材质) -->
+        <geom type="plane" size="10 10 0.1" material="grid" />
+
+        <!-- 可移动的小车 - 提高小车位置，确保摆杆垂落不触地 -->
+        <body name="cart" pos="0 0 1.0">  <!-- 提高小车高度到0.6 -->
+            <inertial pos="0 0 0" mass="2.0" diaginertia="0.1 0.1 0.1"/>
+            <geom type="box" size="0.3 0.15 0.1" material="MatCart" /> <!-- 小车底座尺寸 -->
+            <joint name="slide" type="slide" axis="1 0 0" range="-2 2" />
+
+            <!-- 摆杆 - 铰接在小车顶部中心 -->
+            <body name="pendulum" pos="0 0 0.1">
+                <!-- 关键点：铰链先定义，然后摆杆从铰链向上延伸 -->
+                <joint name="hinge" type="hinge" axis="0 1 0" /> <!-- 无范围限制，可以自由旋转 -->
+                <inertial pos="0 0 0.5" mass="1.0" diaginertia="0.1 0.01 0.1"/> <!-- 摆杆重心在中点 -->
+                <geom type="cylinder" size="0.02 0.5" pos="0 0 0.5" material="MatPendulum" /> <!-- 摆杆从铰链点向上延伸 -->
+            </body>
+        </body>
+    </worldbody>
+
+    <actuator>
+        <motor joint="slide" name="slide_motor" gear="500" />
+    </actuator>
+</mujoco>

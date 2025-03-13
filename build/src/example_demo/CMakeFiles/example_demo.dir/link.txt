@@ -1,0 +1,1 @@
+/usr/bin/c++ -O3 -DNDEBUG CMakeFiles/example_demo.dir/main.cpp.o -o ../../bin/example_demo  -Wl,-rpath,/usr/local/lib: ../../lib/libsphere_demo.a /usr/local/lib/libmujoco.so -lstdc++fs ../../lib/libmouse_controller.a /usr/lib/x86_64-linux-gnu/libGLX.so /usr/lib/x86_64-linux-gnu/libOpenGL.so /usr/lib/x86_64-linux-gnu/libglfw.so.3.3 

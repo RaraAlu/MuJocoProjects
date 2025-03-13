@@ -1,0 +1,2 @@
+/usr/bin/ar qc ../../../lib/libsphere_demo.a CMakeFiles/sphere_demo.dir/sphere_demo.cpp.o
+/usr/bin/ranlib ../../../lib/libsphere_demo.a

@@ -1,0 +1,205 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-Release-f5ebdc15457944623624.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.24"
+					},
+					"projectIndex" : 0,
+					"source" : "."
+				},
+				{
+					"build" : "src",
+					"childIndexes" : 
+					[
+						2,
+						4,
+						5
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-src-Release-b6cf2213fc5053b67c22.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.24"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "src"
+				},
+				{
+					"build" : "src/inverted_pendulum",
+					"childIndexes" : 
+					[
+						3
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-src.inverted_pendulum-Release-7250d1c5a118aac695e0.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.24"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 0,
+					"source" : "src/inverted_pendulum",
+					"targetIndexes" : 
+					[
+						1
+					]
+				},
+				{
+					"build" : "src/inverted_pendulum/pendulum_controller",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-src.inverted_pendulum.pendulum_controller-Release-20c5d415ed7096adbc03.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.24"
+					},
+					"parentIndex" : 2,
+					"projectIndex" : 0,
+					"source" : "src/inverted_pendulum/pendulum_controller",
+					"targetIndexes" : 
+					[
+						3
+					]
+				},
+				{
+					"build" : "src/mouse_controller",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-src.mouse_controller-Release-a4a4b7cdc3e1dffd9d59.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.24"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 0,
+					"source" : "src/mouse_controller",
+					"targetIndexes" : 
+					[
+						2
+					]
+				},
+				{
+					"build" : "src/example_demo",
+					"childIndexes" : 
+					[
+						6
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-src.example_demo-Release-fc9c62d4699cccd9248c.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.24"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 0,
+					"source" : "src/example_demo",
+					"targetIndexes" : 
+					[
+						0
+					]
+				},
+				{
+					"build" : "src/example_demo/sphere_demo",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-src.example_demo.sphere_demo-Release-7b7ca680858cbc0dad99.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.24"
+					},
+					"parentIndex" : 5,
+					"projectIndex" : 0,
+					"source" : "src/example_demo/sphere_demo",
+					"targetIndexes" : 
+					[
+						4
+					]
+				}
+			],
+			"name" : "Release",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6
+					],
+					"name" : "MojocoProjects",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 5,
+					"id" : "example_demo::@b10d07d02d730b48d364",
+					"jsonFile" : "target-example_demo-Release-680ed9cacebbaf9cc375.json",
+					"name" : "example_demo",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "inverted_pendulum::@4f63f080d81ffeceeabe",
+					"jsonFile" : "target-inverted_pendulum-Release-ea14454cf0728daa0510.json",
+					"name" : "inverted_pendulum",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "mouse_controller::@3eec538615ca13c1150f",
+					"jsonFile" : "target-mouse_controller-Release-1785256f1e7b6dc1e39a.json",
+					"name" : "mouse_controller",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "pendulum_controller::@6710265a9381eadd08d0",
+					"jsonFile" : "target-pendulum_controller-Release-d52e7f2e7a1311e6a640.json",
+					"name" : "pendulum_controller",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 6,
+					"id" : "sphere_demo::@eb6d323efaa0b3d30600",
+					"jsonFile" : "target-sphere_demo-Release-504d7b055276b0ee520d.json",
+					"name" : "sphere_demo",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/icebot/work/MojoProjects/build",
+		"source" : "/home/icebot/work/MojoProjects"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 6
+	}
+}
