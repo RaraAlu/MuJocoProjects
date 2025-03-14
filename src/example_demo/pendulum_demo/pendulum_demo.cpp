@@ -59,12 +59,12 @@ void Pendulum::initVisualization()
 
     // m->opt.gravity[2] = -1;
     // qpos is dim nqx1 = 7 x 1, 3 translations + 4 quaternions
-    d->qpos[2] = 0.1;
+    // d->qpos[2] = 0.1;
 
-    d->qvel[0] = 1;
-    d->qvel[2] = 5;
+    // d->qvel[0] = 1;
+    // d->qvel[2] = 5;
 
-    opt.frame = mjFRAME_WORLD;
+    // opt.frame = mjFRAME_WORLD;
 
     // 设置相机参数
     mouseController.setupCamera(&cam, 90, -45, 4.0, 0.0, 0.0, 0.3);

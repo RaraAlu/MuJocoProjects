@@ -36,8 +36,9 @@ int main()
 
     
     // 获取根目录地址的上一级
-    fs::path rootPath = fs::current_path();
-    std::string project_path = rootPath.string() + "/model/pendulum_demo/pendulum.xml";
+    fs::path rootPath = fs::current_path().parent_path();
+    printf("Parent_path: %s\n", rootPath.string().c_str());
+    std::string project_path = rootPath.string() + "/src/example_demo/model/pendulum_demo/pendulum.xml";
     std::cout << "Root Path: " << project_path << std::endl;
 
     // 加载模型
@@ -97,21 +98,21 @@ int main()
             // fy = -c * v * vy;
             // fz = -c * v * vz;
 
-            double vx, vy, vz;
-            vx = data->qvel[0]; vy = data->qvel[1]; vz = data->qvel[2]; 
+            // double vx, vy, vz;
+            // vx = data->qvel[0]; vy = data->qvel[1]; vz = data->qvel[2]; 
 
-            double v;
-            v = sqrt(vx*vx + vy*vy + vz*vz);
+            // double v;
+            // v = sqrt(vx*vx + vy*vy + vz*vz);
 
-            double fx, fy, fz;
-            double c = -0.1;
-            fx = c * v * vx;
-            fy = c * v * vy;
-            fz = c * v * vz;
+            // double fx, fy, fz;
+            // double c = -0.1;
+            // fx = c * v * vx;
+            // fy = c * v * vy;
+            // fz = c * v * vz;
 
-            data->qfrc_applied[0] = fx;
-            data->qfrc_applied[1] = fy;
-            data->qfrc_applied[2] = fz;
+            // data->qfrc_applied[0] = fx;
+            // data->qfrc_applied[1] = fy;
+            // data->qfrc_applied[2] = fz;
 
             simTime += model->opt.timestep;
         }

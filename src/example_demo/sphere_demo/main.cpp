@@ -36,8 +36,9 @@ int main()
 
     
     // 获取根目录地址的上一级
-    fs::path rootPath = fs::current_path();
-    std::string project_path = rootPath.string() + "/model/sphere_demo/sphere.xml";
+    fs::path rootPath = fs::current_path().parent_path();
+    printf("Parent_path: %s\n", rootPath.string().c_str());
+    std::string project_path = rootPath.string() + "/src/example_demo/model/sphere_demo/sphere.xml";
     std::cout << "Root Path: " << project_path << std::endl;
 
     // 加载模型
