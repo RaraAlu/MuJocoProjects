@@ -55,8 +55,19 @@ void SphereDemo::initVisualization()
     mjv_makeScene(m, &scn, 1000);
     mjr_makeContext(m, &con, mjFONTSCALE_150);
 
+
+
+    // m->opt.gravity[2] = -1;
+    // qpos is dim nqx1 = 7 x 1, 3 translations + 4 quaternions
+    d->qpos[2] = 0.1;
+
+    d->qvel[0] = 1;
+    d->qvel[2] = 5;
+
+    opt.frame = mjFRAME_WORLD;
+
     // 设置相机参数
-    mouseController.setupCamera(&cam, 90, -20, 4.0, 0.0, 0.0, 0.3);
+    mouseController.setupCamera(&cam, 90, -45, 4.0, 0.0, 0.0, 0.3);
 
     void* pointer = glfwGetWindowUserPointer(window);
     

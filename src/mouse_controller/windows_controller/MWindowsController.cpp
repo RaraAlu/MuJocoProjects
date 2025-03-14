@@ -44,6 +44,10 @@ void MWindowsController::initializeGLFW(GLFWwindow **window, const char *title, 
     
     // 设置回调函数
     glfwMakeContextCurrent(this->window);
+    // 禁用垂直同步，使渲染不受显示器刷新率限制
+    glfwSwapInterval(0);
+
+    
     glfwSetWindowUserPointer(this->window, this); // 将 this 指针与窗口关联
     glfwSetScrollCallback(this->window, scrollCallback);
     glfwSetWindowSizeCallback(this->window, windowResizeCallback);

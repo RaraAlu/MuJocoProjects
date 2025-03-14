@@ -9,6 +9,9 @@ public:
 
     void render();
     void updateCameraLookAt(double x); // 更新相机跟随
+
+    inline mjvCamera *getCamera() { return &cam; }
+    inline mjData *Data() { return d; }
     
     GLFWwindow *window;
 
