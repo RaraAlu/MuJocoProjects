@@ -5,15 +5,5 @@
 add_subdirectory(sphere_demo)
 # 将来可以添加更多demo
 add_subdirectory(pendulum_demo)
-# add_subdirectory(robot_arm_demo)
-# 等等...
 
-# 在构建时复制共享的模型文件到构建目录
-file(COPY ${CMAKE_CURRENT_SOURCE_DIR}/model
-     DESTINATION ${CMAKE_BINARY_DIR})
 
-# 安装共享的模型文件
-install(
-  DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/model/
-  DESTINATION ${CMAKE_INSTALL_DATADIR}/${PROJECT_NAME}/model
-)
