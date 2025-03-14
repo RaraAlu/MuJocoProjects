@@ -1,4 +1,4 @@
-#include "sphere_demo.h"
+#include "pendulum_demo.h"
 #include <cmath>
 #include <cstring>
 #include <experimental/filesystem>
@@ -37,7 +37,7 @@ int main()
     
     // 获取根目录地址的上一级
     fs::path rootPath = fs::current_path().parent_path();
-    std::string project_path = rootPath.string() + "/src/example_demo/model/sphere_demo/sphere.xml";
+    std::string project_path = rootPath.string() + "/src/example_demo/model/pendulum_demo/pendulum.xml";
     std::cout << "Root Path: " << project_path << std::endl;
 
     // 加载模型
@@ -53,7 +53,7 @@ int main()
 
 
     // 初始化控制器
-    SphereDemo controller(model, data);
+    Pendulum controller(model, data);
 
     // 仿真参数
     int stabilizationSteps = 300000; // 给系统足够时间稳定

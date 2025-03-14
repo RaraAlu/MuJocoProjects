@@ -4,7 +4,7 @@
 # 添加所有demo子目录
 add_subdirectory(sphere_demo)
 # 将来可以添加更多demo
-# add_subdirectory(pendulum_demo)
+add_subdirectory(pendulum_demo)
 # add_subdirectory(robot_arm_demo)
 # 等等...
 
